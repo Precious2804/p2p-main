@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Oitila - Online Money Investment</title>
+    <title> Lucrative Forum</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="{{URL::asset('favicon.ico')}}" type="image/x-icon">
     <!-- bootstrap -->
@@ -118,7 +118,7 @@
                                     <a href="{{ route('welcome') }}" class="logo">
                                         <img src="{{URL::asset('assets/img/logo.png')}}" alt="">
                                     </a>
-                                    <p>Grow your money with Safety, Invest in Oitila now</p>
+                                    <p>Grow your money with Safety, Invest in LucrativeForum now</p>
                                     <div class="social-links">
                                         <ul>
                                             <li>
@@ -182,7 +182,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-xl-8 col-lg-8">
-                                <p>Copyright © <a href="{{ route('welcome') }}">Oitila</a> - 2020. All Rights Reserved</p>
+                                <p>Copyright © <a href="{{ route('welcome') }}">Lucrative Forum</a> - 2020. All Rights Reserved</p>
                             </div>
                         </div>
                     </div>

@@ -533,25 +533,6 @@ class MainController extends Controller
 
     }
 
-    public function doReferral(Request $req){
-        $req->validate([
-            'ref_id'=> 'required|unique:referral_tables'
-        ]);
-
-            $data = ReferralTable::find(auth()->user()->id);
-
-            //updates the referral table already created for unique users, with the referral code that a user inputs
-            $result = $data->update([
-                'ref_id' => $req->ref_id,
-            ]);
-            if($result){
-                return back()->with('successRef', "Referral ID was Created Successfully");
-            } else{
-                return back()->with('failedRef', "Unable to create a New Referral ID");
-            }
-    }
-
-
 
     public function support(){
         $data = ['loggedUserInfo'=>User::where('id', '=', auth()->user()->id)->first()];

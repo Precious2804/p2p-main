@@ -79,36 +79,6 @@
                                         </div>
                                         <br>
                                         <br>
-                                        <div class="col-xl-12 col-lg-12 col-md-12">
-                                        <h3 class="title">
-                                            Referral Commissioning
-                                        </h3>
-                                            <div class="transactions-table">
-                                                <div class="table-responsive">
-                                                    <table class="table display misco-data-table" style="width:100%">
-                                                        <tr>
-                                                            <th scope="col">Username</th>
-                                                            <th scope="col">Referral ID</th>
-                                                            <th scope="col">No of Referrals</th>
-                                                        </tr>
-
-                                                        @foreach($refInfo as $item)
-                                                        <tr class="text-primary">
-                                                            <th scope="row">{{$loggedUserInfo['username']}}</th>
-                                                            <td style="font-weight: bold;">{{$item->ref_id}}</td>
-
-                                                            @if(!$item->commision)
-                                                            <td class="text text-muted">0</td>
-                                                            @endif
-                                                            @if($item->commision)
-                                                            <td>{{$item->commision}}</td>
-                                                            @endif
-                                                        </tr>
-                                                        @endforeach
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                             </div>
                     </div>

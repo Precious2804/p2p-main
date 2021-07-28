@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Oitila - Admin Dashboard</title>
+  <title>Lucrative Forum</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="{{URL::asset('asset/css/app.min.css')}}">
   <!-- Template CSS -->
@@ -16,7 +16,7 @@
 
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="{{URL::asset('asset/css/custom.css')}}">
-  <link rel='shortcut icon' type='image/x-icon' href="{{URL::asset('asset/img/favicon.ico')}}" />
+  <link rel='shortcut icon' type='image/x-icon' href="{{URL::asset('favicon.ico')}}" />
 </head>
 
 <body>
