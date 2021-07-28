@@ -42,7 +42,7 @@
                                                 <span class="text-danger">@error('password') {{$message}} @enderror</span>
                                             </div>
                                             <div class="form-group">
-                                            <label class="float-left" style="font-weight: bold;">Email Address:</label>
+                                            <label class="float-left" style="font-weight: bold;">Confirm Password</label>
                                                 <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm New password">
                                             </div>
                                             <button type="submit" class="btn btn-block btn-primary">Submit</button>

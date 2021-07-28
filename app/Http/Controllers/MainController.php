@@ -69,26 +69,6 @@ class MainController extends Controller
     public function login(){
         return view ('login');
     }
-    
-    public function doForgot(Request $req){
-        $req->validate([
-            'email'=>'required|email'
-        ]);
-        $email = $req->email;
-        $checkEmail = User::where('email', $email)->first();
-        if(!$checkEmail){
-            return back()->with('invalid', "This email address is not Registered on this Platform");
-        }
-        else{
-            $status = Password::sendResetLink(
-                $req->only('email')
-            );
-        
-            return $status === Password::RESET_LINK_SENT
-                        ? back()->with(['status' => __($status)])
-                        : back()->withErrors(['email' => __($status)]);
-        }
-    }
 
     //checks the users inputs and perform sign in
     public function doLogin(Request $req){
