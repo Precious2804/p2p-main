@@ -94,7 +94,7 @@
               <a href="{{ route('admin/settings') }}" class="nav-link"><i data-feather="settings"></i><span>General Settings</span></a>
             </li>
             <li class="dropdown">
-              <a href="{{ route('logout') }}" class="nav-link"><i data-feather="exit"></i><span>Logout</span></a>
+              <a href="{{ route('logout') }}" class="nav-link"><i data-feather="settings"></i><span>Logout</span></a>
             </li>
 
             

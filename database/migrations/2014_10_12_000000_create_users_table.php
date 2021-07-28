@@ -30,6 +30,7 @@ class CreateUsersTable extends Migration
             $table->string('bank')->nullable();
             $table->string('image')->nullable()->default('blank-image.png');
             $table->string('isAdmin')->nullable()->default(0);
+            $table->string('remember_token')->nullable();
             // $table->rememberToken();
             $table->timestamps();
 

@@ -95,7 +95,6 @@
                                                         <option value="{{$item->id}}">{{$item->id}}</option>
                                                         <span class="text-danger">@error('get_help_id'){{ "You must Provide the Transaction ID to Proces your Withdrawal" }}@enderror</span>
                                                     @endforeach
-                                                    
                                                 </select>
                                                 
                                                 <br>

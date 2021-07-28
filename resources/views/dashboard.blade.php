@@ -71,7 +71,7 @@
                                     @if($helpInfo['amount'])
                                         <span class="number">₦{{$helpInfo['amount']}}</span>
                                     @endif
-                                        <span class="text">Investment</span>
+                                        <span class="text">Current Investment</span>
                                     </div>
                                 </div>
                             </div>

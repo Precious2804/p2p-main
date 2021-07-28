@@ -14,24 +14,7 @@
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-5 col-md-7 col-sm-6 col-4 d-flex align-items-center">
-                            <div class="db-user-profile">
-                                <div class="part-data">
-                                    <span class="name">{{ $loggedUserInfo['username'] }}</span>
-                                    <span class="name"><h6 class="name">{{$loggedUserInfo['email']}}</h6></span>
-                                    <span><a href="{{ route('track') }}"style="color: black;">Back to Tracker</a></span>
-                                </div>
-                                
-                                @if (!$loggedUserInfo['image'])
-                                <div class="part-img">
-                                    <img src="{{URL::asset('assets/img/blank-image.png')}}" alt="">
-                                </div>
-                                @endif
-                                @if ($loggedUserInfo['image'])
-                                <div class="part-img">
-                                    <img src="{{$loggedUserInfo['image']}}" alt="">
-                                </div>
-                                @endif
-                            </div>
+                            @include('/partials/navigation')
                         </div>
                     </div>
                 </div>

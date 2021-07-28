@@ -58,6 +58,7 @@
                                                 {{Session::get('proofFail')}}
                                             </div>
                                         @endif
+                                        <span class="text-danger">@error('id'){{ "Payment Proof has already been uploaded" }}@enderror</span>
                                     @csrf
                                     <input type="hidden" name="email" value="{{$loggedUserInfo['email']}}">
                                     <input type="hidden" name="id" value="{{$findMerge['id']}}">

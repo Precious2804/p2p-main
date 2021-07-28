@@ -51,6 +51,16 @@
                             </nav>
                         </div>
 
+                        @if(Session::get('proofUpload'))
+                            <div class="alert alert-sucess">
+                                {{Session::get('proofUpload')}}
+                            </div>
+                        @endif
+                        @if(Session::get('successConfirm'))
+                            <div class="alert alert-sucess">
+                                {{Session::get('successConfirm')}}
+                            </div>
+                        @endif
                         <div class="row">
                             <div class="col-xl-7 col-lg-7 col-md-7">
                             <br>
@@ -58,16 +68,6 @@
                                     <div class="">Pending Provide Requests</div>
                                 </h3>
                                 <div class="add-credit-card card">
-                                @if(Session::get('proofUpload'))
-                                    <div class="alert alert-sucess">
-                                        {{Session::get('proofUpload')}}
-                                    </div>
-                                @endif
-                                @if(Session::get('successConfirm'))
-                                    <div class="alert alert-sucess">
-                                        {{Session::get('successConfirm')}}
-                                    </div>
-                                @endif
                                     <div class="table-reponsive">
                                         <table class="table display misco-data-table" style="width:100%">
                                             <tr>

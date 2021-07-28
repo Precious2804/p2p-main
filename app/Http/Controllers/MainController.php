@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use PHPUnit\Util\Json;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Password;
 use Intervention\Image\Facades\Image;
 
 class MainController extends Controller
@@ -67,6 +68,26 @@ class MainController extends Controller
     //returns the login view
     public function login(){
         return view ('login');
+    }
+    
+    public function doForgot(Request $req){
+        $req->validate([
+            'email'=>'required|email'
+        ]);
+        $email = $req->email;
+        $checkEmail = User::where('email', $email)->first();
+        if(!$checkEmail){
+            return back()->with('invalid', "This email address is not Registered on this Platform");
+        }
+        else{
+            $status = Password::sendResetLink(
+                $req->only('email')
+            );
+        
+            return $status === Password::RESET_LINK_SENT
+                        ? back()->with(['status' => __($status)])
+                        : back()->withErrors(['email' => __($status)]);
+        }
     }
 
     //checks the users inputs and perform sign in
@@ -156,7 +177,7 @@ class MainController extends Controller
     //Return dashboard view method
     public function dashboard(){
         $data = User::where('id', '=', auth()->user()->id)->first();
-        $helpInfo = ProvideHelp::where('id', '=', auth()->user()->id)->first();
+        $helpInfo = ProvideHelp::where('email', '=', auth()->user()->email)->first();
         $investDetail = UserTotalHelp::where('id', '=', auth()->user()->id)->first();
         $allProvide = RunningInvestment::query()->where('email', auth()->user()->email)->get();
         $refInfo = ReferralTable::where('id', auth()->user()->id)->first();
@@ -370,6 +391,7 @@ class MainController extends Controller
     public function uploadProof(Request $req){
 
         $req->validate([
+            'id'=>'unique:payment_proofs',
             'email' => 'required',
             'pay_method' => 'required',
             'dep_name' => 'required',
@@ -468,23 +490,25 @@ class MainController extends Controller
         $invest = ['investDetail'=>UserTotalHelp::where('id', '=', auth()->user()->id)->first()];
         $refInfo = ['refInfo'=>ReferralTable::where('id', '=', auth()->user()->id)->first()];
         $getInfo = ['getInfo'=>RunningInvestment::where('email', '=', auth()->user()->email)->get()];
-        $getSpecific = ['getSpecific'=>RunningInvestment::where('id', $req->get_help_id)->first()];
+        // $getSpecific = ['getSpecific'=>RunningInvestment::where('id', $req->get_help_id)->first()];
+        $dataSession = ['getSpecific'=>session('dataSession')];
         $rate = ['rate'=>SettingTable::where('id', '=', 1)->first()->rate];
         return view('gh', $data)->with($invest)
                                 ->with($getInfo)
-                                ->with($getSpecific)
                                 ->with($refInfo)
-                                ->with($rate);
+                                ->with($rate)
+                                ->with($dataSession);
     }
     public function doGet(Request $req){
         $req->validate([
             'get_help_id'=>'required'
         ]);
-        ProcessGet::create([
-            'email' =>$req->email,
-            'get_help_id'=>$req->get_help_id
-        ]);
+        // ProcessGet::create([
+        //     'email' =>$req->email,
+        //     'get_help_id'=>$req->get_help_id
+        // ]);
             $data = RunningInvestment::where('id', $req->get_help_id)->first();
+            session()->put('dataSession', $data);
             $data2 = RunningInvestment::where('email', $req->email)->first();
             $beforeGet = SettingTable::where('id', '=', 1)->first()->beforeGet;
 
@@ -495,7 +519,7 @@ class MainController extends Controller
                 return back()->with('failedGet', "You must have at least Two(2) Investments Running on the Platform before Withdrawal can be granted");
             }
             elseif($data){
-                return back()->with('successGet', "SuccessFull");
+                return back()->with('successGet', $data);
             }
             else{
                 return back()->with('failed', "Un-recognized Transaction ID");
@@ -795,7 +819,7 @@ class MainController extends Controller
             'amount'=>'required'
         ]);
         $user = User::where('email', $req->email)->first();
-        $acct_name = $user['name'];
+        $acct_name = $user['acct_name'];
         $acct_number = $user['acct_number'];
         $bank = $user['bank'];
         $phone = $user['phone'];
