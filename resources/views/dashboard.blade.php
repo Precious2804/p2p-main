@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="part-info">
                                     @if(!$helpInfo['amount'])
-                                        <span class="number">0</span>
+                                        <span class="number">₦0</span>
                                     @endif
                                     @if($helpInfo['amount'])
                                         <span class="number">₦{{$helpInfo['amount']}}</span>
@@ -82,7 +82,7 @@
                                     </div>
                                     <div class="part-info">
                                     @if(!$helpInfo['profit'])
-                                        <span class="number">0</span>
+                                        <span class="number">₦0</span>
                                     @endif
                                     @if($helpInfo['profit'])
                                         <span class="number">₦{{$helpInfo['profit']}}</span>
@@ -101,7 +101,7 @@
                                         <span class="number">0%</span>
                                     @endif
                                     @if($helpInfo['rate'])
-                                        <span class="number">₦{{$helpInfo['rate']}}</span>
+                                        <span class="number">{{$helpInfo['rate']}}%</span>
                                     @endif
                                         <span class="text">Net Rate</span>
                                     </div>
@@ -114,7 +114,7 @@
                                     </div>
                                     <div class="part-info">
                                     @if(!$helpInfo['total'])
-                                        <span class="number">0</span>
+                                        <span class="number">₦0</span>
                                     @endif
                                     @if($helpInfo['total'])
                                         <span class="number">₦{{$helpInfo['total']}}</span>

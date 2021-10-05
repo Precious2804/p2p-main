@@ -72,12 +72,19 @@ class MainController extends Controller
 
     //checks the users inputs and perform sign in
     public function doLogin(Request $req){
+        $user = User::where('email', $req->email)->first();
          if(User::Where('email', $req->email)->exists() == true){
 
              $credentials = ['email' => $req->email, 'password' => $req->password];
              if(Auth::validate($credentials) == true) {
                  Auth::attempt($credentials, $req->remember_me == 'on' ? true : false);
-                 return redirect()->to(route('dashboard'));
+                 
+                 if($user['isAdmin'] == 1){
+                     return redirect()->to(route('admin/dashboard'));
+                 }
+                 else{
+                    return redirect()->to(route('dashboard'));
+                 }
              } else {
                  return redirect()->back()->with('info', 'invalid username or Password, please check your credentials and try again.')->withInput($req->only('loginEmail'));
              }
