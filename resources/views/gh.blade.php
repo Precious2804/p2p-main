@@ -83,9 +83,9 @@
                                                         {{Session::get('failed')}}
                                                     </div>
                                                 @endif
-                                                @if(Session::get('notDue'))
+                                                @if(Session::get('not_due'))
                                                     <div class="alert alert-danger">
-                                                        {{Session::get('notDue')}}
+                                                        {{Session::get('not_due')}}
                                                     </div>
                                                 @endif
                                                 <label>Select the Transaction ID</label>

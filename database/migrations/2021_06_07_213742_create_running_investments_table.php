@@ -21,6 +21,7 @@ class CreateRunningInvestmentsTable extends Migration
             $table->string('rate')->nullable();
             $table->string('profit')->nullable();
             $table->string('total')->nullable();
+            $table->string('due_date')->nullable();
             $table->timestamps();
         });
     }

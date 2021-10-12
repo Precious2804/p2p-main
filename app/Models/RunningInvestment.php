@@ -16,6 +16,7 @@ class RunningInvestment extends Model
         'rate',
         'profit',
         'total',
+        'due_date'
     ];
 
     public $incrementing = false;

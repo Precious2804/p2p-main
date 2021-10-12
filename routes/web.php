@@ -120,6 +120,7 @@ Route::group(['middleware'=>['auth']], function(){
     Route::post('/confirmPay', [MainController::class, 'confirmPay'])->name('confirmPay');
     Route::get('/chat/{id}', [MainController::class, 'chat'])->name('chat/{id}');
     Route::post('/newMessage', [MainController::class, 'newMessage'])->name('newMessage');
+    Route::post('/change_password', [MainController::class, 'change_password'])->name('change_password');
 });
 
 

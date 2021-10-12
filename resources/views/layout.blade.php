@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Lucrative Forum</title>
+    <title> 💰 Lucrative Forum 💰</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="{{URL::asset('favicon.ico')}}" type="image/x-icon">
     <!-- bootstrap -->

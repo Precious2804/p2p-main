@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Lucrative Forum</title>
+  <title> 💰 Lucrative Forum 💰</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="{{URL::asset('asset/css/app.min.css')}}">
   <!-- Template CSS -->

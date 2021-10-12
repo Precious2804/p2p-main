@@ -20,6 +20,8 @@ use App\Models\SettingTable;
 use App\Models\Testimonials;
 use App\Models\User;
 use App\Models\UserTotalHelp;
+use App\Rules\MatchOldPassword;
+use Carbon\Carbon;
 use GrahamCampbell\ResultType\Result;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -458,6 +460,7 @@ class MainController extends Controller
             'rate'=>$req->rate,
             'profit'=>$req->profit,
             'total'=>$req->total,
+            'due_date'=>Carbon::now()->addDays(14)
         ]);
         if($result){
             AllProvidedHelp::find($req->id)->delete();
@@ -496,14 +499,18 @@ class MainController extends Controller
         // ]);
             $data = RunningInvestment::where('id', $req->get_help_id)->first();
             session()->put('dataSession', $data);
-            $data2 = RunningInvestment::where('email', $req->email)->first();
+            $data2 = RunningInvestment::where('email', $req->email)->get();
             $beforeGet = SettingTable::where('id', '=', 1)->first()->beforeGet;
 
             // check the number of times that the user has provided help on the system
             $data2Count = $data2->count('email');
+            $due_date = $data['due_date'];
 
             if ($data2Count < $beforeGet) {
                 return back()->with('failedGet', "You must have at least Two(2) Investments Running on the Platform before Withdrawal can be granted");
+            }
+            elseif(Carbon::now() < $due_date) {
+                return back()->with('not_due', "Your Investment has to be up to 14days, before, you are Eligible to Withdraw");
             }
             elseif($data){
                 return back()->with('successGet', $data);
@@ -949,5 +956,18 @@ class MainController extends Controller
         } else{
             return back()->with('fail', "Operation Failed");
         }
+    }
+
+    public function change_password(Request $request){
+        $request->validate([
+            'current_password'=>['required', new MatchOldPassword],
+            'password'=>'required|confirmed|min:6'
+        ]);
+        $user = User::where('user_id', Auth::user()->user_id)->first();
+        $user->update([
+            'password'=>Hash::make($request->password)
+        ]);
+
+        return back()->with('success', "Your Password was Updated successfully");
     }
 }
