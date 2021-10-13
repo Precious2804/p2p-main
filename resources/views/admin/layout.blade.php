@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title> 💰 Lucrative Forum 💰</title>
+  <title> {{env('APP_NAME')}} </title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="{{URL::asset('asset/css/app.min.css')}}">
   <!-- Template CSS -->
@@ -51,7 +51,7 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="{{ route('admin/dashboard') }}"> <img alt="image" src="{{URL::asset('assets/img/logo.png')}}" class="header-logo" /> <span
+            <a href="{{ route('admin/dashboard') }}"> <img alt="image" src="{{URL::asset('assets/img/pycrest.png')}}" class="header-logo" /> <span
                 class="logo-name"></span>
             </a>
           </div>

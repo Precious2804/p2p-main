@@ -20,11 +20,11 @@ class DatabaseSeeder extends Seeder
             'fname' => 'Admin',
             'lname' => 'Admin',
             'username' => 'admin',
-            'email' => 'admin@admin.com',
+            'email' => 'admin@pycrest.com',
             'phone' => '0000000',
             'gender' => 'Male',
             'ref_id' => 'admin',
-            'password' => Hash::make(123456),
+            'password' => Hash::make('yetAnotherSecretKey'),
             'isAdmin' => '1'
         ]);
 

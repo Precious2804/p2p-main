@@ -8,7 +8,7 @@
                         <div class="col-xl-7 col-lg-7 col-sm-10 col-md-9 d-xl-flex d-lg-flex d-block align-items-center d-banner-tamim">
                             <div class="banner-content">
                                 <h4>Want to Invest Money?</h4>
-                                <h1>Grow your money with safety invest in lucrativeforum</h1>
+                                <h1>Grow your money with safety invest in {{env('APP_NAME')}}</h1>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="part-text">
                                         <h3 class="title">500+</h3>
-                                        <p>Number of Registered Users on lucrativeforum</p>
+                                        <p>Number of Registered Users on {{env('APP_NAME')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +133,7 @@
                                             </div>
                                             <div class="feature-text">
                                                 <h3>We're Certified</h3>
-                                                <p> lucrativeforum is a Highly trusted peer-to-peer donnation platform, that is widely used across Africa</p>
+                                                <p> {{env('APP_NAME')}} is a Highly trusted peer-to-peer donnation platform, that is widely used across Africa</p>
                                             </div>
                                         </div>
                                     </div>
@@ -144,7 +144,7 @@
                                             </div>
                                             <div class="feature-text">
                                                 <h3>We're Global</h3>
-                                                <p>lucrativeforum is a globally used web application across africa, with a bigger aim of going world-wide with its flexible offers and adaptable policies</p>
+                                                <p> {{env('APP_NAME')}} is a globally used web application across africa, with a bigger aim of going world-wide with its flexible offers and adaptable policies</p>
                                             </div>
                                         </div>
                                     </div>
@@ -205,7 +205,7 @@
                                     You couldn't think
                                 </span>
                                 <h2>
-                                    why Lucrativeforum is<span class="special">  the best</span>
+                                    why {{env('APP_NAME')}} is<span class="special">  the best</span>
                                 </h2>
                             </div>
                         </div>
@@ -236,7 +236,7 @@
                                             </div>
                                             <div class="part-text">
                                                 <h3 class="title">Unlimited Referral Bonus</h3>
-                                                <p>Promote lucrativeforum and earn unlimited referral commission from each referral links</p>
+                                                <p>Promote {{env('APP_NAME')}} and earn unlimited referral commission from each referral links</p>
                                             </div>
                                         </div>
                                     </div>
@@ -274,7 +274,7 @@
                                             </div>
                                             <div class="part-text">
                                                 <h3 class="title">24/7 Friendly Support</h3>
-                                                <p>We provide 24/7 friendly support in lucrativeforum. We're always responsible to take care</p>
+                                                <p>We provide 24/7 friendly support in {{env('APP_NAME')}}. We're always responsible to take care</p>
                                             </div>
                                         </div>
                                     </div>

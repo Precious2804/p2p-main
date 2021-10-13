@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 💰 Lucrative Forum 💰</title>
+    <title> {{env('APP_NAME')}} </title>
     <!-- favicon -->
     <link rel="shortcut icon" href="{{URL::asset('favicon.ico')}}" type="image/x-icon">
     <!-- bootstrap -->
@@ -59,7 +59,7 @@
                                     <div class="col-xl-12 col-lg-12 col-6 d-xl-block d-lg-block d-flex align-items-center justify-content-end">
                                         <div class="logo">
                                             <a href="{{ route('welcome') }}">
-                                                <img src="assets/img/logo.png" alt="">
+                                                <img src="assets/img/pycrest.png" alt="" style="width: 100px; height:70px">
                                             </a>
                                         </div>
                                     </div>
@@ -116,9 +116,9 @@
                             <div class="col-xl-8 col-lg-8 col-md-10 col-sm-12" style="margin-left: 30px;">
                                 <div class="about-widget">
                                     <a href="{{ route('welcome') }}" class="logo">
-                                        <img src="{{URL::asset('assets/img/logo.png')}}" alt="">
+                                        <img src="{{URL::asset('assets/img/pycrest.png')}}" alt="">
                                     </a>
-                                    <p>Grow your money with Safety, Invest in LucrativeForum now</p>
+                                    <p>Grow your money with Safety, Invest in {{env('APP_NAME')}} now</p>
                                     <div class="social-links">
                                         <ul>
                                             <li>
@@ -182,7 +182,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-xl-8 col-lg-8">
-                                <p>Copyright © <a href="{{ route('welcome') }}">Lucrative Forum</a> - 2020. All Rights Reserved</p>
+                                <p>Copyright © <a href="{{ route('welcome') }}"> {{env('APP_NAME')}} </a> - 2020. All Rights Reserved</p>
                             </div>
                         </div>
                     </div>

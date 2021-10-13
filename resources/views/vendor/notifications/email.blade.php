@@ -44,7 +44,7 @@
 {{ $salutation }}
 @else
 @lang('Regards'),<br>
-Lucrative Forum
+{{env('APP_NAME')}}
 @endif
 
 {{-- Subcopy --}}

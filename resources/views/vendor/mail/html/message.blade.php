@@ -2,7 +2,7 @@
 {{-- Header --}}
 @slot('header')
 @component('mail::header', ['url' => config('app.url')])
-{{ "Lucrative Forum" }}
+{{ env('APP_NAME') }}
 @endcomponent
 @endslot
 
@@ -21,7 +21,7 @@
 {{-- Footer --}}
 @slot('footer')
 @component('mail::footer')
-© {{ date('Y') }} {{ "Lucrative Forum" }}. @lang('All rights reserved.')
+© {{ date('Y') }} {{ env('APP_NAME') }}. @lang('All rights reserved.')
 @endcomponent
 @endslot
 @endcomponent
