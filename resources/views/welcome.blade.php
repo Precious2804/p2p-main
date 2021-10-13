@@ -24,7 +24,7 @@
                             <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                                 <div class="single-system">
                                     <div class="part-icon">
-                                        <img src="assets/img/svg/add-user.svg" alt="">
+                                        <img src="{{URL::asset('assets/img/svg/add-user.svg')}}" alt="">
                                     </div>
                                     <div class="part-text">
                                         <h4 class="title">Register Account</h4>
@@ -35,7 +35,7 @@
                             <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                                 <div class="single-system">
                                     <div class="part-icon">
-                                        <img src="assets/img/svg/coin.svg" alt="">
+                                        <img src="{{URL::asset('assets/img/svg/coin.svg')}}" alt="">
                                     </div>
                                     <div class="part-text">
                                         <h4 class="title">Invest Money</h4>
@@ -46,7 +46,7 @@
                             <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                                 <div class="single-system">
                                     <div class="part-icon">
-                                        <img src="assets/img/svg/money-bag.svg" alt="">
+                                        <img src="{{URL::asset('assets/img/svg/money-bag.svg')}}" alt="">
                                     </div>
                                     <div class="part-text">
                                         <h4 class="title">Get Withdraw</h4>
@@ -65,7 +65,7 @@
                             <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                                 <div class="single-system">
                                     <div class="part-icon">
-                                        <img src="assets/img/svg/add-user.svg" alt="">
+                                        <img src="{{URL::asset('assets/img/svg/add-user.svg')}}" alt="">
                                     </div>
                                     <div class="part-text">
                                         <h3 class="title">500+</h3>
@@ -76,7 +76,7 @@
                             <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                                 <div class="single-system">
                                     <div class="part-icon">
-                                        <img src="assets/img/svg/coin.svg" alt="">
+                                        <img src="{{URL::asset('assets/img/svg/coin.svg')}}" alt="">
                                     </div>
                                     <div class="part-text">
                                         <h3 class="title">700+</h3>
@@ -87,7 +87,7 @@
                             <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                                 <div class="single-system">
                                     <div class="part-icon">
-                                        <img src="assets/img/svg/money-bag.svg" alt="">
+                                        <img src="{{URL::asset('assets/img/svg/money-bag.svg')}}" alt="">
                                     </div>
                                     <div class="part-text">
                                         <h3 class="title">700+</h3>
@@ -118,7 +118,7 @@
                                     <div class="col-xl-12 col-lg-12 col-sm-12 col-md-6">
                                         <div class="single-feature">
                                             <div class="feature-icon">
-                                                <img src="assets/img/svg/solar-energy.svg" alt="">
+                                                <img src="{{URL::asset('assets/img/svg/solar-energy.svg')}}" alt="">
                                             </div>
                                             <div class="feature-text">
                                                 <h3>We Innovate</h3>
@@ -129,7 +129,7 @@
                                     <div class="col-xl-12 col-lg-12 col-sm-12 col-md-6">
                                         <div class="single-feature">
                                             <div class="feature-icon">
-                                                <img src="assets/img/svg/diploma.svg" alt="">
+                                                <img src="{{URL::asset('assets/img/svg/diploma.svg')}}" alt="">
                                             </div>
                                             <div class="feature-text">
                                                 <h3>We're Certified</h3>
@@ -140,7 +140,7 @@
                                     <div class="col-xl-12 col-lg-12 col-sm-12 col-md-6">
                                         <div class="single-feature">
                                             <div class="feature-icon">
-                                                <img src="assets/img/svg/worldwide.svg" alt="">
+                                                <img src="{{URL::asset('assets/img/svg/worldwide.svg')}}" alt="">
                                             </div>
                                             <div class="feature-text">
                                                 <h3>We're Global</h3>
@@ -179,7 +179,7 @@
                             </div>
                             <div class="col-xl-4 col-lg-4 d-xl-flex d-lg-flex justify-content-end d-block align-items-center">
                                 <div class="part-video">
-                                    <img src="assets/img/video.jpg" alt="">
+                                    <img src="{{URL::asset('assets/img/video.jpg')}}" alt="">
                                     <button data-video-id="L61p2uyiMSo" class="play-video js-video-button"><i class="fas fa-play"></i></button>
                                 </div>
                             </div>
@@ -218,7 +218,7 @@
                                         <div class="single-reason">
                                             <div class="icon-box">
                                                 <div class="part-icon">
-                                                    <img src="assets/img/svg/withdraw.svg" alt="">
+                                                    <img src="{{URL::asset('assets/img/svg/withdraw.svg')}}" alt="">
                                                 </div>
                                             </div>
                                             <div class="part-text">
@@ -231,7 +231,7 @@
                                         <div class="single-reason">
                                             <div class="icon-box">
                                                 <div class="part-icon">
-                                                    <img src="assets/img/svg/referral.svg" alt="">
+                                                    <img src="{{URL::asset('assets/img/svg/referral.svg')}}" alt="">
                                                 </div>
                                             </div>
                                             <div class="part-text">
@@ -246,7 +246,7 @@
                         <div class="col-xl-4 col-lg-2 d-xl-flex d-lg-none d-block align-items-end">
                             <div class="part-img">
                                 <div class="shadow-shape"></div>
-                                <img src="assets/img/choosing-reason.png" alt="">
+                                <img src="{{URL::asset('assets/img/choosing-reason.png')}}" alt="">
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-5 col-sm-10 col-md-12">
@@ -256,7 +256,7 @@
                                         <div class="single-reason">
                                             <div class="icon-box">
                                                 <div class="part-icon">
-                                                    <img src="assets/img/svg/shield.svg" alt="">
+                                                    <img src="{{URL::asset('assets/img/svg/shield.svg')}}" alt="">
                                                 </div>
                                             </div>
                                             <div class="part-text">
@@ -269,7 +269,7 @@
                                         <div class="single-reason">
                                             <div class="icon-box">
                                                 <div class="part-icon">
-                                                    <img src="assets/img/svg/customer-service.svg" alt="">
+                                                    <img src="{{URL::asset('assets/img/svg/customer-service.svg')}}" alt="">
                                                 </div>
                                             </div>
                                             <div class="part-text">

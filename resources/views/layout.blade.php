@@ -36,7 +36,7 @@
 
         <!-- preloader begin-->
         <div class="preloader">
-            <img src="assets/img/tenor.gif" alt="">
+            <img src="{{URL::asset('assets/img/tenor.gif')}}" alt="">
         </div>
         <!-- preloader end -->
 
@@ -59,7 +59,7 @@
                                     <div class="col-xl-12 col-lg-12 col-6 d-xl-block d-lg-block d-flex align-items-center justify-content-end">
                                         <div class="logo">
                                             <a href="{{ route('welcome') }}">
-                                                <img src="assets/img/pycrest.png" alt="" style="width: 100px; height:70px">
+                                                <img src="{{URL::asset('assets/img/pycrest.png')}}" alt="" style="width: 100px; height:70px">
                                             </a>
                                         </div>
                                     </div>
@@ -197,22 +197,22 @@
                 <ul>
                     <li>
                         <a href="#0">
-                            <img src="assets/img/svg/profile.svg" alt="">
+                            <img src="{{URL::asset('assets/img/svg/profile.svg')}}" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="#0">
-                            <img src="assets/img/svg/money-transfering.svg" alt="">
+                            <img src="{{URL::asset('assets/img/svg/money-transfering.svg')}}" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="#0">
-                            <img src="assets/img/svg/calculator.svg" alt="">
+                            <img src="{{URL::asset('assets/img/svg/calculator.svg')}}" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="#header">
-                            <img src="assets/img/svg/arrow.svg" alt="">
+                            <img src="{{URL::asset('assets/img/svg/arrow.svg')}}" alt="">
                         </a>
                     </li>
                 </ul>
@@ -222,7 +222,7 @@
         <div class="d-xl-block d-lg-block d-none">
             <div class="back-to-top-btn">
                 <a href="#">
-                    <img src="assets/img/svg/arrow.svg" alt="">
+                    <img src="{{URL::asset('assets/img/svg/arrow.svg')}}" alt="">
                 </a>
             </div>
         </div>

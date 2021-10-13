@@ -8,13 +8,13 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title> {{env('APP_NAME')}} </title>
   <!-- General CSS Files -->
-  <link rel="stylesheet" href="asset/css/app.min.css">
+  <link rel="stylesheet" href="{{URL::asset('asset/css/app.min.css')}}">
   <!-- Template CSS -->
-  <link rel="stylesheet" href="asset/css/style.css">
-  <link rel="stylesheet" href="asset/css/components.css">
+  <link rel="stylesheet" href="{{URL::asset('asset/css/style.css')}}">
+  <link rel="stylesheet" href="{{URL::asset('asset/css/components.css')}}">
   <!-- Custom style CSS -->
-  <link rel="stylesheet" href="asset/css/custom.css">
-  <link rel='shortcut icon' type='image/x-icon' href='asset/img/favicon.ico' />
+  <link rel="stylesheet" href="{{URL::asset('asset/css/custom.css')}}">
+  <link rel='shortcut icon' type='image/x-icon' href="{{URL::asset('asset/img/favicon.ico')}}" />
 </head>
 
 <body>
@@ -70,15 +70,15 @@
     </section>
   </div>
   <!-- General JS Scripts -->
-  <script src="asset/js/app.min.js"></script>
+  <script src="{{URL::asset('asset/js/app.min.js')}}"></script>
   <!-- JS Libraies -->
-  <script src="asset/bundles/apexcharts/apexcharts.min.js"></script>
+  <script src="{{URL::asset('asset/bundles/apexcharts/apexcharts.min.js')}}"></script>
   <!-- Page Specific JS File -->
-  <script src="asset/js/page/index.js"></script>
+  <script src="{{URL::asset('asset/js/page/index.js')}}"></script>
   <!-- Template JS File -->
-  <script src="asset/js/scripts.js"></script>
+  <script src="{{URL::asset('asset/js/scripts.js')}}"></script>
   <!-- Custom JS File -->
-  <script src="asset/js/custom.js"></script>
+  <script src="{{URL::asset('asset/js/custom.js')}}"></script>
 </body>
 
 
